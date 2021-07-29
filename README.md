@@ -14,36 +14,32 @@ For example, the following command executes the n-gram tokenizer:
 python tokenizer.py -i dataset.npy -t tokens.npy -n 2 -o output.npy
 ```
 Arguments of each file are described in the following table.
-|tokenizer.py|||
-|:---:|:---:|:---:|
-|Short option|Complete option|Description|
-|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
-|`-t`|`--tokens`|Path to the list of pre-defined tokens stored in a numpy (.npy) file. For example a pre-defined token for SQLi is "or".|
-|`-n`|-|The size of n in n-gram.|
-|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
-|**clusterTokens.py**|||
-|`-i`|`--input`|Path to the output of the ***tokenizer.py***.|
-|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
-|**binaryEncoder.py**|||
-|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
-|`-c`|`--cluster`|Path to the output of the ***clusterTokens.py***.|
-|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
-|**autoEncoder.py**|||
-|`-i`|`--input`|Path to the output of the ***binaryEncoder.py***.|
-|`-e`|`--epochs`|The number of training epochs.|
-|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
-|**clusterPayloads.py**|||
-|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
-|`-f`|`--features`|Path to the output of the ***autoEncoder.py***.|
-|`-t`|`--tokens`|Path to the list of pre-defined tokens stored in a numpy (.npy) file.|
-|`-n`|-|The size of n in n-gram.|
-|`-k`|-|The number of clusters (the size of k in k-means).|
-|`-d`|`--directory`|Path to the output *directory*.|
-|**oracle.py**|||
-|`-i`|`--input`|Path to the *directory* that contains the outputs of ***clusterPayloads.py***.|
-|`-u`|`--url`|The *ip*/url of the WAF.|
-|`-c`|`--cluster`|The number of clusters (the size of k in k-means).|
-|`-d`|`--directory`|Path to the output *directory*.|
+|File|Short option|Complete option|Description|
+|:---:|:---:|:---:|:---:|
+|**tokenizer.py**|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
+|"|`-t`|`--tokens`|Path to the list of pre-defined tokens stored in a numpy (.npy) file. For example a pre-defined token for SQLi is "or".|
+|"|`-n`|-|The size of n in n-gram.|
+|"|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
+||**clusterTokens.py**|||
+|"|`-i`|`--input`|Path to the output of the ***tokenizer.py***.|
+|"|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
+|**binaryEncoder.py**|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
+|"|`-c`|`--cluster`|Path to the output of the ***clusterTokens.py***.|
+|"|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
+|"|**autoEncoder.py**|||
+|"|`-i`|`--input`|Path to the output of the ***binaryEncoder.py***.|
+|"|`-e`|`--epochs`|The number of training epochs.|
+|"|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
+|**clusterPayloads.py**|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
+|"|`-f`|`--features`|Path to the output of the ***autoEncoder.py***.|
+|"|`-t`|`--tokens`|Path to the list of pre-defined tokens stored in a numpy (.npy) file.|
+|"|`-n`|-|The size of n in n-gram.|
+|"|`-k`|-|The number of clusters (the size of k in k-means).|
+|"|`-d`|`--directory`|Path to the output *directory*.|
+|**oracle.py**|`-i`|`--input`|Path to the *directory* that contains the outputs of ***clusterPayloads.py***.|
+|"|`-u`|`--url`|The *ip*/url of the WAF.|
+|"|`-c`|`--cluster`|The number of clusters (the size of k in k-means).|
+|"|`-d`|`--directory`|Path to the output *directory*.|
 
 
 
