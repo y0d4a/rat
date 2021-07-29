@@ -178,7 +178,7 @@ if __name__ == "__main__":
    parser.add_argument('-c', '--cluster', action="store", type=int)
    parser.add_argument('-u', '--url', action="store")
    parser.add_argument('-i', '--input', action="store")
-   parser.add_argument('-o', '--output', action="store")
+   parser.add_argument('-d', '--directory', action="store")
    args = parser.parse_args()
    oracle(args.url, args.input, args.output, args.cluster)
         
