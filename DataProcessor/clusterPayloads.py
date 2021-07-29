@@ -25,17 +25,6 @@ def clear_directory(directory):
         except Exception as e:
             print('Failed to delete %s. Reason: %s' % (file_path, e))
             
-def k_estimator(low, high, data):
-    step = 1
-    data = np.load(data)
-    data = np.reshape(data,(data.shape[0],data.shape[1]))
-    
-    scores = [silhouette_score(data,
-                              MiniBatchKMeans(n_clusters=k, random_state=42, batch_size=128, init_size=3*k, verbose=0).fit_predict(data),
-                              metric='euclidean', sample_size=np.min([50000, data.shape[0]]), random_state=42) for k in tqdm(range(low, high + step, step))]
-    scores = np.asarray(scores)
-    k = low + (np.argmax(scores) * step)
-    return k
 
 def cluster(payloads, features, k, directory):
     data = np.load(features)
@@ -170,13 +159,11 @@ def extract_features(k, n, t, directory):
 if __name__ == "__main__":
    parser = argparse.ArgumentParser()
    parser.add_argument('-n', action="store", default=2, type=int)
-   parser.add_argument('-m', '--minimum', action="store", default=25, type=int)
-   parser.add_argument('-M', '--maximum', action="store", default=50, type=int)
+   parser.add_argument('-k', action="store", default=25, type=int)
    parser.add_argument('-i', '--input', action="store")
    parser.add_argument('-t', '--tokens', action="store")
    parser.add_argument('-f', '--features', action="store")
    parser.add_argument('-d', '--directory', action="store")
    args = parser.parse_args()
-   k = k_estimator(args.minimum, args.maximum, args.features)
-   cluster(args.input, args.features, k, args.directory)
-   extract_features(k, args.n, args.tokens, args.directory)
+   cluster(args.input, args.features, args.k, args.directory)
+   extract_features(args.k, args.n, args.tokens, args.directory)
