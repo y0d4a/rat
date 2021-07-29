@@ -25,7 +25,7 @@ Arguments of each file are described in the following table.
 |**binaryEncoder.py**|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
 |"|`-c`|`--cluster`|Path to the output of the ***clusterTokens.py***.|
 |"|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
-|"|**autoEncoder.py**|`-i`|`--input`|Path to the output of the ***binaryEncoder.py***.|
+|**autoEncoder.py**|`-i`|`--input`|Path to the output of the ***binaryEncoder.py***.|
 |"|`-e`|`--epochs`|The number of training epochs.|
 |"|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
 |**clusterPayloads.py**|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file.|
