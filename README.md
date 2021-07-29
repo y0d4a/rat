@@ -13,6 +13,8 @@ For example, the following command executes the n-gram tokenizer:
 ```
 python tokenizer.py -i dataset.npy -t tokens.npy -n 2 -o output_directory
 ```
+Arguments of each file are described in the following table.
+
 
 
 
