@@ -6,7 +6,6 @@ Created on Sun Jul 26 12:50:46 2020
 """
 import numpy as np
 from sklearn.cluster import MiniBatchKMeans
-from sklearn.metrics import silhouette_score
 from tqdm import tqdm
 import argparse
 import math
