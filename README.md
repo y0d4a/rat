@@ -52,6 +52,6 @@ Arguments of each file are described in the following table.
 
 ## References
 <a id="1">[1]</a> 
-M. Amouei, M. Rezvani and M. Fateh, "RAT: Reinforcement-Learning-Driven and Adaptive Testing for Vulnerability Discovery in Web Application Firewalls," in IEEE Transactions on Dependable and Secure Computing, doi: 10.1109/TDSC.2021.3095417.
+[M. Amouei, M. Rezvani and M. Fateh, "RAT: Reinforcement-Learning-Driven and Adaptive Testing for Vulnerability Discovery in Web Application Firewalls," in IEEE Transactions on Dependable and Secure Computing, doi: 10.1109/TDSC.2021.3095417.](https://doi.org/10.1109/TDSC.2021.3095417)
 
      Licensed under the Academic Free License version 3.0
