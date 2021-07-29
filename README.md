@@ -11,9 +11,19 @@ python filename.py <arguments>
 ```
 For example, the following command executes the n-gram tokenizer:
 ```
-python tokenizer.py -i dataset.npy -t tokens.npy -n 2 -o output_directory
+python tokenizer.py -i dataset.npy -t tokens.npy -n 2 -o output.npy
 ```
 Arguments of each file are described in the following table.
+|tokenizer.py|||
+|:---:|:---:|:---:|
+|Short option|Complete option|Description|
+|`-i`|`--input`|Path to the list of attack samples stored in a numpy (.npy) file|
+|`-t`|`--tokens`|Path to the list of pre-defined tokens stored in a numpy (.npy) file. For example a pre-defined token for SQLi is "or"|
+|`-n`|-|The size of n in n-gram|
+|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
+|**clusterTokens.py**|||
+|`-i`|`--input`|Path to the output of the tokenizer.py|
+|`-o`|`--output`|the name of the numpy (.npy) file to store the output in it.|
 
 
 
